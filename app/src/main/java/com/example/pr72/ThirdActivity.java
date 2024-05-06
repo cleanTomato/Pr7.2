@@ -18,5 +18,8 @@ public class ThirdActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog);
         dialog.show();
+        TextView textView = dialog.findViewById(R.id.textView);
+        Intent intent = getIntent();
+        textView.setText(intent.getStringExtra("transport_message1" + " " + "transport_message2"));
     }
 }
